@@ -1,56 +1,6 @@
-set nocompatible
-filetype off
-
-set runtimepath+=~/dotfiles/dot.vim/vundle/
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
-
-Bundle 'AutoComplPop'
-Bundle 'EnhCommentify.vim'
-Bundle 'FuzzyFinder'
-Bundle 'L9'
-Bundle 'Rename'
-Bundle 'calendar.vim'
-Bundle 'gnupg'
-Bundle 'matchit.zip'
-Bundle 'project.tar.gz'
-Bundle 'twilight256.vim'
-Bundle 'vimwiki'
-
-Bundle 'duskhacker/sweet-rspec-vim'
-Bundle 'ecomba/vim-ruby-refactoring'
-Bundle 'h1mesuke/vim-alignta'
-Bundle 'kana/vim-textobj-entire'
-Bundle 'kana/vim-textobj-indent'
-Bundle 'kana/vim-textobj-jabraces'
-Bundle 'kana/vim-textobj-user'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'kenchan/rubyblue'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'pangloss/vim-javascript'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'scrooloose/syntastic'
-Bundle 'taq/vim-rspec'
-Bundle 'thinca/vim-ref'
-Bundle 'tpope/vim-abolish'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-ragtag'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-rake'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-speeddating'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'vim-ruby/vim-ruby'
-
 filetype plugin indent on
 
 syntax enable
-colorscheme twilight256
 
 set encoding=utf-8
 set fileencodings=utf-8,cp932,eucjp,iso2022jp,utf-16
@@ -126,25 +76,5 @@ autocmd InsertLeave * highlight StatusLine ctermfg=white
 " 挿入モード時、paste オプションを解除する
 autocmd InsertLeave * set nopaste
 
-" 自動的に QuickFix リストを表示する
-autocmd QuickFixCmdPost make,grep,grepadd,vimgrep,vimgrepadd cwin
-autocmd QuickFixCmdPost lmake,lgrep,lgrepadd,lvimgrep,lvimgrepadd lwin
-
 let g:netrw_altv = 1
-let g:vimwiki_home = '~/Public/Drop Box/vimwiki/'
 let g:CommandTMaxHeight = 20
-
-" FuzzyFinder
-let g:fuf_modesDisable = []
-let g:fuf_enumeratingLimit = 30
-let g:fuf_ignoreCase = 0
-let g:fuf_keyOpenSplit = '<C-s>'
-
-nnoremap <Space>ff :FufMruFile<CR>
-nnoremap <Space>fc :FufMruCmd<CR>
-nnoremap <Space>fh :FufHelp<CR>
-
-nnoremap <Space>ra :SweetVimRspecRunFile<CR>
-nnoremap <Space>rf :SweetVimRspecRunFocused<CR>
-nnoremap <Space>rr :SweetVimRspecRunPrevious<CR>
-
